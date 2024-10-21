@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const div=document.createElement('div');
+    console.log(div);
+    div.className='parent'
+    div.id='child';
+    div.setAttribute("title","Hello");
+    div.style.backgroundColor="pink";
+    div.style.padding= '12px';
+
+    const addText=document.createTextNode("chai with prerna")
+    div.appendChild(addText);
+
+    document.body.appendChild(div);
+ 
+    // const fun=()=>{
+
+    
+    const div1=document.createElement('div');
+    console.log(div);
+    div1.className="Parent";
+    div1.id="Child";
+    div1.style.backgroundColor="green";
+    div1.style.padding="20px";
+    document.body.appendChild(div1);
+    // const adding=document.createTextNode("MAjjjaaaaamaaaaa");
+    // div.appendChild(adding);
+    //}
+
+
+</script>
+</html>

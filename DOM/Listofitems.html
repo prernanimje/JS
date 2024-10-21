@@ -1,0 +1,54 @@
+<!--You are building a web page that displays a list of items. The user should be able to add new items to the list and edit the text of the items. Your task is to use the DOM API to create the necessary elements, add event listeners to them, and manipulate the elements as the user interacts with the page.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="list-app">
+    <div>
+</body>
+<script>
+    const div=document.getElementById("list-app");
+    const ele=document.createElement("p")
+    ele.innerHTML="Click on the item to change the text, or click on the button to create a new item."
+    div.appendChild(ele);
+    const list=document.createElement("ul");
+    const lis=document.createElement("li");
+    const lis1=document.createElement("li");
+    const lis2=document.createElement("li");
+    const input=document.createElement("input");
+    input.setAttribute("type","text");
+    const button=document.createElement("button");
+    button.innerHTML="Create new list";
+    lis.innerHTML="Map, filter, reduce";
+    lis1.innerHTML="The DOM";
+    lis2.innerHTML="Callbacks";
+    list.appendChild(lis);
+    list.appendChild(lis1);
+    list.appendChild(lis2);
+    div.appendChild(input);
+    div.appendChild(button);
+    
+    button.addEventListener("click", function() {
+    const newItem = document.createElement("li");
+    // newItem.innerHTML = 'New item';
+    list.appendChild(newItem);
+    input.value = " ";
+});
+
+    list.addEventListener("click", function(event) {
+    if (event.target.tagName === "li") {
+        const text = prompt("Enter new text:");
+        event.target.innerHTML = text;
+    }
+});
+    div.appendChild(list);
+    div.appendChild(input);
+    div.appendChild(button);
+    
+
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Write a JavaScript program to calculate sphere volume.
+Sample Output of the form :-->
+<div style="height: 30%; width: 30%;border-color: black;">
+
+    <p>input radius value to get sphere volume</p>
+    <label for="raduis">Radius</label><br>
+    <input type="text" id="radius"><br>
+    <label for="volume">Volume</label><br>
+    <input type="text" id="volume" placeholder="0.0000"><br><br>
+    <button id="btn" type="submit" name="submit" onclick="getAnswer()">Calculate</button>
+
+</div>
+</body>
+<script>
+   function getAnswer(){
+    var volume;
+    let radius=document.getElementById("radius").value;
+    radius=Math.abs(radius);
+    volume=(4/3) *Math.PI* Math.pow(radius,3);
+    volume=volume.toFixed(4);
+    console.log("volume==>", volume)
+    document.getElementById("volume").value=volume;
+    console.log(volume);
+    }
+
+</script>
+</html>

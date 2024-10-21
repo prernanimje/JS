@@ -1,0 +1,74 @@
+<!--When the user clicks the ‘Register’ button, a message should be displayed informing them of a successful user registration.--><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form class="form" onsubmit="validateForm(event)">
+           <div>
+                <label id="FullNameLabel">Full Name</label></br>
+                  <input 
+                    type="text" 
+                    placeholder="John Doe" 
+                    id="FullName">
+                </input>
+            </div>
+            <div>
+                <label id="EmailLabel">Email</label></br>
+                 <input 
+                    type="text" 
+                    placeholder="johndoe@email.com" 
+                    id="Email">
+                </input>
+             </div>
+             <div>
+                <label id="PhoneNumberLabel">Phone Number</label></br>
+                 <input 
+                    type="text" 
+                    placeholder="(123) 456-7890" 
+                    id="PhoneNumber">
+                </input>
+             </div>
+             <div>
+                <label id="PasswordLabel">Password</label></br>
+                 <input 
+                    name="Password"
+                    id="Password"
+                    type="password" 
+                    placeholder="Password"
+                    onkeyup='conc();'>
+                </input>
+             </div>
+             <div>
+                <label id="ConfirmPswdLabel">Confirm Password</label></br>
+                 <input 
+                    type="password" 
+                    placeholder="Confirm Password" 
+                    id="ConfirmPassword"></input>
+             </div>
+             <span id="Message"></span>
+          
+        </form>
+          <button type="button" value="button" onclick="func()">Register</button>
+    </div>
+</body>
+<script>
+    const conc = function(){
+        if(document.getElementById('Password').value==document.getElementById('ConfirmPassword').value){
+            return document.getElementById('Message').style.color="green",
+            document.getElementById('Message').innerText="Password matches"
+        }else{
+            return document.getElementById('Message').style.color="red",
+            document.getElementById('Message').innerText="Password does not matches"
+        }
+    }
+    const func=function(){
+    const car=document.getElementById("button")
+    alert("You Successfully Register")
+    }
+
+</script>
+</html>

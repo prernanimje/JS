@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Using the <i> onchange event attribute </i> to invoke the particular function whenever the user checks and unchecks checkbox </h3>
+   <label for = "check"> Are you above 18? </label> 
+   <input type = "checkbox" id = "check" value = "18" onclick = "showHidePan()"> <br><br>
+   <div id = "pan-input" style="display: none;">
+      <label for = "pan"> Enter your pan number </label>
+      <input type = "text" id = "pan">
+   </div>
+   <script>
+     function showHidePan(){
+        let check=document.getElementById('check');
+        let pan_input=document.getElementById('pan-input');
+        if(check.checked){
+           pan_input.style.display="flex";
+        }else{
+            pan_input.style.display="none";
+        }
+     }
+   </script>
+</body>
+</html>
